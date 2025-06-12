@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🎧 VoxGem Podcast Player</title>
+  <style>
+    body {
+      background: #111;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+    }
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #ffa500;
+    }
+    #waveform {
+      width: 90%;
+      margin: 20px auto;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      background: #ffa500;
+      border: none;
+      border-radius: 5px;
+      color: #111;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    button:hover {
+      background: #ffbb33;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎙️ VoxGem Podcast</h1>
+  <div id="waveform"></div>
+  <button id="playPauseBtn">▶️ Play Podcast</button>
+
+  <script src="https://unpkg.com/wavesurfer.js"></script>
+  <script>
+    const wavesurfer = WaveSurfer.create({
+      container: '#waveform',
+      waveColor: '#ffa500',
+      progressColor: '#fff',
+      height: 100,
+      barWidth: 2,
+      responsive: true
+    });
+
+    wavesurfer.load("voxgem_podcast.wav");
+
+    const playBtn = document.getElementById('playPauseBtn');
+    playBtn.addEventListener('click', () => {
+      wavesurfer.playPause();
+    });
+
+    wavesurfer.on('play', () => {
+      playBtn.textContent = '⏸ Pause Podcast';
+    });
+
+    wavesurfer.on('pause', () => {
+      playBtn.textContent = '▶️ Play Podcast';
+    });
+
+    wavesurfer.on('finish', () => {
+      playBtn.textContent = '▶️ Play Podcast';
+    });
+  </script>
+</body>
+</html>
