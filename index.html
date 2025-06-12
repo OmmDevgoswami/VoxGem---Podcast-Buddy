@@ -4,43 +4,62 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>🎧 VoxGem Podcast Player</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap" rel="stylesheet">
   <style>
     body {
-      background: #111;
-      color: #fff;
-      font-family: 'Segoe UI', sans-serif;
+      background: #0c0c0c;
+      color: #eee;
+      font-family: 'Roboto', sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 40px;
+      padding: 40px 20px;
+      overflow-x: hidden;
     }
     h1 {
-      font-size: 2em;
-      margin-bottom: 20px;
+      font-size: 2.5em;
+      margin-bottom: 10px;
       color: #ffa500;
+      font-family: 'Orbitron', sans-serif;
+      text-shadow: 0 0 10px #ffa50066;
+    }
+    .speaker {
+      font-size: 1.2em;
+      margin: 10px 0 20px;
+      padding: 10px 20px;
+      border-radius: 20px;
+      background: #222;
+      box-shadow: 0 0 8px #ff9800;
+      transition: all 0.3s ease;
     }
     #waveform {
       width: 90%;
       margin: 20px auto;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 12px #ffa50077;
     }
     button {
-      padding: 10px 20px;
+      padding: 12px 28px;
       font-size: 1em;
       background: #ffa500;
       border: none;
-      border-radius: 5px;
+      border-radius: 6px;
       color: #111;
       cursor: pointer;
-      margin-top: 20px;
+      margin-top: 25px;
+      transition: all 0.3s ease;
     }
     button:hover {
-      background: #ffbb33;
+      background: #ffc266;
+      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
 
   <h1>🎙️ VoxGem Podcast</h1>
+  <!-- <div id="currentSpeaker" class="speaker">🔈 Current Speaker: <b>Alex</b></div> -->
   <div id="waveform"></div>
   <button id="playPauseBtn">▶️ Play Podcast</button>
 
@@ -48,16 +67,21 @@
   <script>
     const wavesurfer = WaveSurfer.create({
       container: '#waveform',
-      waveColor: '#ffa500',
-      progressColor: '#fff',
-      height: 100,
+      waveColor: '#ffa50033',
+      progressColor: '#ffa500',
+      height: 120,
       barWidth: 2,
-      responsive: true
+      responsive: true,
+      cursorColor: '#fff',
     });
 
     wavesurfer.load("voxgem_podcast.wav");
 
     const playBtn = document.getElementById('playPauseBtn');
+    const speakerDiv = document.getElementById('currentSpeaker');
+
+    let isPlaying = false;
+
     playBtn.addEventListener('click', () => {
       wavesurfer.playPause();
     });
@@ -72,6 +96,22 @@
 
     wavesurfer.on('finish', () => {
       playBtn.textContent = '▶️ Play Podcast';
+    });
+
+    // const speakerTimings = [
+    //   { time: 0, speaker: "Alex" },
+    //   { time: 5, speaker: "Aria" },
+    //   { time: 15, speaker: "Alex" },
+    //   { time: 25, speaker: "Aria" }
+    // ];
+
+    wavesurfer.on('audioprocess', (currentTime) => {
+      for (let i = speakerTimings.length - 1; i >= 0; i--) {
+        if (currentTime >= speakerTimings[i].time) {
+          speakerDiv.innerHTML = `🔈 Current Speaker: <b>${speakerTimings[i].speaker}</b>`;
+          break;
+        }
+      }
     });
   </script>
 </body>

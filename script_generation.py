@@ -28,7 +28,7 @@ Make sure the podcast script is engaging and educational.
 Add pauses in the script where appropriate.
 Make sure the script is in a conversational tone.
 Make the script so it can sound natural with two speakers talking and having breaks or pauses where needed.
-Make the podcast atleast of 5 mintues and max of 10 mintues.
+Make the podcast atleast of 10 mintues and max of 15 mintues.
 Add laughs and emotions to the script where appropriate.
 
 Here is the content to base the conversation on:
