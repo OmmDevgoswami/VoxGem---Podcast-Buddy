@@ -1,7 +1,6 @@
 # VoxGem
-<a href="https://ibb.co/fz4JXyQn"><img src="https://i.ibb.co/nNzpwYRn/Screenshot-2025-06-12-120751.png" alt="Screenshot-2025-06-12-120751" border="0"></a>
 This is a contribution under My Summer Internship with Build Fast with AI
-<a href="https://ibb.co/QfgsN1v"><img src="https://i.ibb.co/drTn2z4/Brainrot.png" alt="Brainrot" border="0"></a><br /><a target='_blank' href='https://dedupelist.com/'></a><br />
+<a href="https://ibb.co/fz4JXyQn"><img src="https://i.ibb.co/nNzpwYRn/Screenshot-2025-06-12-120751.png" alt="Screenshot-2025-06-12-120751" border="0"></a> <br />
 
 ## Inspiration
 We all love background soundtracks while we work - be it lo-fi music, horror movie explanations, or podcasts. And lately, podcasts have become more than just entertainment - they’re stories, experiences, raw human emotions shared through voice. This sparked the curiosity "Can I simulate that podcast magic using AI?", and then rest is History:
@@ -39,7 +38,7 @@ It takes any novel, site, pdf or any readable thing that you want and with it's 
 6. Run the "**podcast.py**" to generate the .wav file containing the interaction between our Voice Models.
 7. Run the "**index.html**" as "Show Preview" to hear the amazing Podcast with a clean UI.
 ###                                        or
-1. Use the google collab file ``` https://colab.research.google.com/drive/1kj1-OKoCOBW4SDkDSeG3VQv7RAgE56DB?usp=sharing ```  to run and test directly the outcomes !!
+1. Use the google collab file: https://colab.research.google.com/drive/1kj1-OKoCOBW4SDkDSeG3VQv7RAgE56DB?usp=sharing to run and test directly the outcomes !!
 
 ## Video Tutorial:
 https://drive.google.com/file/d/1c4Lzn_AvDzXaMxJUk3mQo1X1stDHMdwM/view?usp=sharing
