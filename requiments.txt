@@ -1,0 +1,6 @@
+requests
+markdown
+beautifulsoup4
+google-generativeai
+regex
+python-dotenv
