@@ -38,7 +38,7 @@ It takes any novel, site, pdf or any readable thing that you want and with it's 
 6. Run the "**podcast.py**" to generate the .wav file containing the interaction between our Voice Models.
 7. Run the "**index.html**" as "Show Preview" to hear the amazing Podcast with a clean UI.
 ###                                        or
-1. Use the google collab file ``` https://colab.research.google.com/drive/1kj1-OKoCOBW4SDkDSeG3VQv7RAgE56DB?usp=sharing ```  to run and test directly the outcomes !!
+1. Use the google collab file: https://colab.research.google.com/drive/1kj1-OKoCOBW4SDkDSeG3VQv7RAgE56DB?usp=sharing to run and test directly the outcomes !!
 
 ## Video Tutorial:
 https://drive.google.com/file/d/1c4Lzn_AvDzXaMxJUk3mQo1X1stDHMdwM/view?usp=sharing
